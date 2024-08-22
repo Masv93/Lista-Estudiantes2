@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes por Carrera</title>
+</head>
+<body>
+    <h1>Estudiantes en la Carrera: <%= carrera %></h1>
+    <% if (students.length > 0) { %>
+        <ul>
+            <% students.forEach(student => { %>
+                <li><%= student.nombre %></li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No se encontraron estudiantes en esta carrera.</p>
+    <% } %>
+    <a href="/students">Regresar</a>
+</body>
+</html>

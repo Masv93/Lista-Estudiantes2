@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Estudiantes</title>
+</head>
+<body>
+    <h1>Resultados de Búsqueda</h1>
+    <% if (students.length > 0) { %>
+        <ul>
+            <% students.forEach(student => { %>
+                <li><%= student.nombre %> - <%= student.carrera %></li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No se encontraron estudiantes con ese nombre.</p>
+    <% } %>
+    <a href="/students">Regresar</a>
+</body>
+</html>
